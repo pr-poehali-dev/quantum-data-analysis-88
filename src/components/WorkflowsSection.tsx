@@ -4,50 +4,50 @@ import { ChevronLeft, ChevronRight, Plus, ArrowRight, MessageSquare, GitBranch, 
 const carouselCards = [
   {
     id: 1,
-    category: "Запросы клиентов",
-    title: "Создавайте то, что нужно клиентам",
+    category: "Уведомления сотрудникам",
+    title: "Напоминайте о предстоящих проверках",
     icon: ArrowRight,
     mockup: "intercom",
   },
   {
     id: 2,
-    category: "Git-интеграция",
-    title: "Автоматизируйте PR и коммиты",
+    category: "История изменений",
+    title: "Отслеживайте все действия в системе",
     icon: Plus,
     mockup: "github",
   },
   {
     id: 3,
-    category: "Orbit Mobile",
-    title: "Управляйте работой откуда угодно",
+    category: "Мобильный доступ",
+    title: "Работайте с платформой с телефона",
     icon: ArrowRight,
     mockup: "mobile",
   },
   {
     id: 4,
-    category: "Orbit Asks",
-    title: "Превращайте запросы в задачи",
+    category: "Заявки на проверку",
+    title: "Превращайте запросы в задания",
     icon: ArrowRight,
     mockup: "asks",
   },
   {
     id: 5,
-    category: "Интеграции Orbit",
-    title: "100+ способов расширить возможности",
+    category: "Интеграции",
+    title: "Подключение к 1С, HR и кадровым системам",
     icon: ArrowRight,
     mockup: "integrations",
   },
   {
     id: 6,
-    category: "Интеграция с Figma",
-    title: "Связь между разработкой и дизайном",
+    category: "Экспорт данных",
+    title: "Выгрузка в Excel, PDF и печатные формы",
     icon: ArrowRight,
     mockup: "figma",
   },
   {
     id: 7,
-    category: "Для разработчиков",
-    title: "Создавайте плагины через Orbit API",
+    category: "API для разработчиков",
+    title: "Встройте платформу в вашу экосистему",
     icon: ArrowRight,
     mockup: "api",
   },
@@ -58,35 +58,35 @@ function IntercomMockup() {
     <div className="flex flex-col gap-3 p-4">
       <div className="flex items-center gap-2 text-xs text-zinc-400">
         <MessageSquare className="w-3.5 h-3.5" />
-        <span>Intercom</span>
+        <span>Уведомление</span>
         <span className="text-zinc-600">·</span>
-        <span className="text-zinc-500">sarah@example.com</span>
+        <span className="text-zinc-500">ivanov@company.ru</span>
       </div>
       <p className="text-sm text-zinc-300">
-        Нужна разбивка затрат <span className="text-zinc-500">по...</span>
+        Срок проверки истекает <span className="text-zinc-500">через 7 дней...</span>
       </p>
 
       <div className="mt-2 flex items-center gap-2 bg-zinc-800/50 rounded-lg px-3 py-2">
         <div className="w-5 h-5 bg-zinc-700 rounded flex items-center justify-center">
-          <span className="text-[10px] text-zinc-400">A</span>
+          <span className="text-[10px] text-zinc-400">И</span>
         </div>
-        <span className="text-sm text-zinc-300">ACME</span>
-        <span className="text-xs text-zinc-500">Новый запрос</span>
+        <span className="text-sm text-zinc-300">Иванов А.П.</span>
+        <span className="text-xs text-zinc-500">Требуется проверка</span>
       </div>
 
       <div className="mt-1 flex items-center gap-2 bg-zinc-800/30 rounded-lg px-3 py-2">
         <div className="w-5 h-5 bg-yellow-500/20 rounded flex items-center justify-center">
           <span className="text-[10px] text-yellow-500">◆</span>
         </div>
-        <span className="text-sm text-zinc-400">Мультиоблачные</span>
-        <span className="text-xs text-zinc-500">затраты</span>
+        <span className="text-sm text-zinc-400">Электробезопасность</span>
+        <span className="text-xs text-zinc-500">группа III</span>
       </div>
 
       <div className="mt-1 flex items-center gap-2 px-3 py-2">
         <div className="w-4 h-4 rounded-full border border-zinc-600" />
-        <span className="text-sm text-zinc-500">Планирование</span>
+        <span className="text-sm text-zinc-500">Запланировать</span>
         <div className="ml-2 flex items-center gap-1 text-xs text-zinc-600">
-          <span>Q4 2025</span>
+          <span>до 15 мая</span>
         </div>
       </div>
     </div>
@@ -98,33 +98,32 @@ function GitHubMockup() {
     <div className="flex flex-col gap-2 p-4">
       <div className="flex items-center gap-2 text-xs">
         <GitBranch className="w-3.5 h-3.5 text-zinc-500" />
-        <span className="text-zinc-400">#20319</span>
-        <span className="text-zinc-500">igor/lin 15287</span>
-        <span className="text-blue-400/70">add sourc...</span>
+        <span className="text-zinc-400">#1041</span>
+        <span className="text-zinc-500">Петрова М.С.</span>
+        <span className="text-blue-400/70">ОТ-2025...</span>
       </div>
 
       <div className="mt-3 space-y-2">
         <div className="flex items-center gap-2 text-xs">
           <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">связал</span>
-          <span className="text-blue-400/70">igor/lin 15287</span>
-          <span className="text-zinc-600">add sou...</span>
+          <span className="text-zinc-500">система</span>
+          <span className="text-zinc-600">назначила проверку</span>
+          <span className="text-blue-400/70">охрана труда</span>
         </div>
         <div className="flex items-center gap-2 text-xs">
           <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">изменил статус с В работе...</span>
+          <span className="text-zinc-500">Петрова</span>
+          <span className="text-zinc-600">изменила статус на Пройдено...</span>
         </div>
         <div className="flex items-center gap-2 text-xs">
           <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">GitHub</span>
-          <span className="text-zinc-600">изменил статус с На ревью...</span>
+          <span className="text-zinc-500">система</span>
+          <span className="text-zinc-600">сформировала протокол...</span>
         </div>
         <div className="flex items-center gap-2 text-xs">
           <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">изменил статус с Готово...</span>
+          <span className="text-zinc-500">руководитель</span>
+          <span className="text-zinc-600">подписал удостоверение...</span>
         </div>
       </div>
     </div>
@@ -243,22 +242,22 @@ export function WorkflowsSection() {
             {/* Orange indicator */}
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-orange-500" />
-              <span className="text-sm text-zinc-400">Процессы и интеграции</span>
+              <span className="text-sm text-zinc-400">Автоматизация и интеграции</span>
               <ChevronRight className="w-4 h-4 text-zinc-600" />
             </div>
 
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-medium text-white leading-[1.1]">
-              Работайте слаженно
+              Подключайтесь
               <br />
-              между инструментами
+              к вашим системам
             </h2>
           </div>
 
           {/* Description */}
           <p className="text-zinc-400 lg:max-w-sm lg:pt-12">
-            Расширьте возможности Orbit с помощью интеграций, которые синхронизируют всю команду и держат фокус на
-            главном.
+            Расширьте SafeTrack с помощью интеграций с кадровыми системами, 1С и корпоративными порталами — данные
+            всегда актуальны и синхронизированы.
           </p>
         </div>
 

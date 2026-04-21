@@ -2,12 +2,12 @@ import { motion } from "framer-motion"
 import { ChevronRight, Check, Paperclip, Globe, Lightbulb } from "lucide-react"
 
 const agents = [
-  { name: "Cursor", isAgent: true, selected: true, icon: "◇" },
-  { name: "GitHub Copilot", isAgent: true, selected: false, icon: "◉" },
-  { name: "Sentry", isAgent: true, selected: false, icon: "◈" },
-  { name: "Leela", isAgent: false, selected: false, icon: "○" },
-  { name: "Codex", isAgent: true, selected: false, icon: "◎" },
-  { name: "Conor", isAgent: false, selected: false, icon: "○" },
+  { name: "Охрана труда", isAgent: true, selected: true, icon: "◇" },
+  { name: "Пожарная безопасность", isAgent: true, selected: false, icon: "◉" },
+  { name: "Электробезопасность", isAgent: true, selected: false, icon: "◈" },
+  { name: "Иванов А.П.", isAgent: false, selected: false, icon: "○" },
+  { name: "Промышленная безопасность", isAgent: true, selected: false, icon: "◎" },
+  { name: "Петрова М.С.", isAgent: false, selected: false, icon: "○" },
 ]
 
 export function AISection() {
@@ -31,7 +31,7 @@ export function AISection() {
             className="flex items-center gap-2 mb-6"
           >
             <div className="w-2 h-2 rounded-full bg-blue-500" />
-            <span className="text-zinc-400 text-sm">Искусственный интеллект</span>
+            <span className="text-zinc-400 text-sm">Автоматизация и контроль</span>
             <ChevronRight className="w-4 h-4 text-zinc-500" />
           </motion.div>
 
@@ -49,7 +49,7 @@ export function AISection() {
               lineHeight: 1.1,
             }}
           >
-            Разработка с ИИ-помощником
+            Назначение проверок — автоматически
           </motion.h2>
 
           {/* Description */}
@@ -60,8 +60,8 @@ export function AISection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-zinc-400 max-w-md mb-8"
           >
-            <span className="text-white font-medium">Orbit для агентов.</span> Выбирайте из множества ИИ-агентов и
-            делегируйте задачи: от генерации кода до других технических задач.
+            <span className="text-white font-medium">Умное назначение.</span> Выбирайте направление обучения и
+            назначайте ответственных: система сама отслеживает сроки и напоминает о предстоящих проверках.
           </motion.p>
 
           {/* Learn more button */}
@@ -135,7 +135,7 @@ export function AISection() {
 
                 {/* Input field */}
                 <div className="bg-zinc-800/50 border border-zinc-700 rounded-t-xl px-5 py-4">
-                  <span className="text-zinc-500 italic">Назначить...</span>
+                  <span className="text-zinc-500 italic">Выбрать направление проверки...</span>
                 </div>
 
                 {/* Dropdown options */}
@@ -200,9 +200,9 @@ export function AISection() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Left column */}
               <div className="border-t border-r border-b border-zinc-800/60 pt-12 pr-12 pb-16">
-                <h3 className="text-zinc-200 font-medium text-xl mb-3">Автопилот для продукта</h3>
+                <h3 className="text-zinc-200 font-medium text-xl mb-3">Автоматический контроль сроков</h3>
                 <p className="text-zinc-500 text-base mb-8">
-                  Оптимизируйте рабочие процессы с ИИ-ассистентом для рутинных и ручных задач.
+                  Система сама отслеживает периодичность проверок и заблаговременно уведомляет ответственных.
                 </p>
 
                 {/* Triage Intelligence Card */}
@@ -282,45 +282,47 @@ export function AISection() {
 
               {/* Right column */}
               <div className="border-t border-b border-zinc-800/60 pt-12 pl-12 pb-16">
-                <h3 className="text-zinc-200 font-medium text-xl mb-3">Orbit MCP</h3>
+                <h3 className="text-zinc-200 font-medium text-xl mb-3">Отчётность для регулятора</h3>
                 <p className="text-zinc-500 text-base mb-8">
-                  Подключите Orbit к любимым инструментам: Cursor, Claude, ChatGPT и другим.
+                  Формируйте готовые отчёты для проверяющих органов в один клик — данные всегда актуальны.
                 </p>
 
-                {/* MCP Code Snippet */}
+                {/* Report Snippet */}
                 <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-5 font-mono text-sm">
-                  <p className="text-zinc-700 mb-3">//mcp.orbit.app/sse</p>
+                  <p className="text-zinc-700 mb-3">// Журнал проверки знаний</p>
                   <div className="space-y-1 mb-6">
                     <p>
-                      <span className="text-orange-400/70">"mcpServers"</span>
-                      <span className="text-zinc-500">: {"{"}</span>
-                    </p>
-                    <p className="pl-4">
-                      <span className="text-orange-400/70">"orbit"</span>
-                      <span className="text-zinc-500">: {"{"}</span>
-                    </p>
-                    <p className="pl-8">
-                      <span className="text-orange-400/70">"command"</span>
+                      <span className="text-orange-400/70">"подразделение"</span>
                       <span className="text-zinc-500">: </span>
-                      <span className="text-green-400/70">"npx"</span>
+                      <span className="text-green-400/70">"Цех №3"</span>
+                    </p>
+                    <p>
+                      <span className="text-orange-400/70">"сотрудников"</span>
+                      <span className="text-zinc-500">: </span>
+                      <span className="text-blue-400/70">42</span>
+                    </p>
+                    <p>
+                      <span className="text-orange-400/70">"прошли проверку"</span>
+                      <span className="text-zinc-500">: </span>
+                      <span className="text-emerald-400/70">40</span>
                     </p>
                   </div>
 
-                  {/* Ask Anything Input */}
+                  {/* Report Actions */}
                   <div className="bg-zinc-800/40 rounded-lg p-4">
                     <div className="flex items-center gap-2 mb-4">
                       <span className="w-0.5 h-5 bg-zinc-600" />
-                      <span className="text-zinc-600">Спросите что угодно</span>
+                      <span className="text-zinc-600">Выгрузить отчёт</span>
                     </div>
 
                     <div className="flex items-center gap-2">
                       <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
                         <Paperclip className="w-3.5 h-3.5" />
-                        Файл
+                        Excel
                       </button>
                       <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
                         <Globe className="w-3.5 h-3.5" />
-                        Поиск
+                        PDF
                       </button>
                       <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
                         <Lightbulb className="w-3.5 h-3.5" />
